@@ -1,9 +1,11 @@
 package net.chmielowski.statestore.livedata
 
+import androidx.annotation.Keep
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import net.chmielowski.statestore.core.StateStore
 
+@Keep
 class LiveDataStateStore<STATE>(initial: STATE) : StateStore<STATE> {
 
     override val currentState get() = _state.value!!
