@@ -1,5 +1,9 @@
 apply plugin: 'kotlin'
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.pchmielowski.StateStore'
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
