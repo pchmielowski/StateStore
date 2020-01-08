@@ -6,7 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import net.chmielowski.statestore.core.StateStore
 
 @Keep
-class LiveDataStateStore<STATE>(initial: STATE) : StateStore<STATE> {
+class LiveDataStateStore<STATE>(initial: STATE, logger: Logger<STATE> = Logger.Companion.NoOp()) :
+    StateStore<STATE> {
 
     override val currentState get() = _state.value!!
 
