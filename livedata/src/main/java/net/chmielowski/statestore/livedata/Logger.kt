@@ -1,5 +1,8 @@
 package net.chmielowski.statestore.livedata
 
+import androidx.annotation.Keep
+
+@Keep
 interface Logger<STATE> {
 
     fun log(old: STATE, new: STATE)
